@@ -1,0 +1,13 @@
+name: Github dispatch test
+
+on:
+  workflow_dispatch: # This event allows you to run the workflow manually
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Echo greeting
+        run: echo "Hello, what's the time?"
